@@ -4,20 +4,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 @Injectable()
-export class LoginService {
+export class ReportService {
 
     public url:string;
     public headers:any;
 
     constructor( private http:HttpClient ){
         this.headers = new HttpHeaders().set("Content-type", "application/x-www-form-urlencoded");
-        this.url = "https://us-central1-summa-celsia.cloudfunctions.net/customLogin";
+        this.url = "https://us-central1-summa-celsia.cloudfunctions.net/recordData";
     }
 
-    logUser(params) {
-        console.log(params);
-        let body = "userName=" + params.userName + "&userPass=" + params.userPass;
-        console.log(body);
+    sendReport(params) {
+        let body = "userName=" + params.userName + "&userPass=" + params.userPass
         return this.http.post(this.url, body, this.headers);
     }
 

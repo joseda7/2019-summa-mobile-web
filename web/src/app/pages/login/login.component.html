@@ -1,17 +1,22 @@
 
 <section class="section-login">
 
-    <div class="input-container">
-        <input required type="text" />
-        <label>Nombre de usuario</label>
+    <div class="container-white">
+
+        <img class="logoCelsia" src="./../../../assets/img/logo_celsia.svg" alt="Logo Celsia">
+
+        <div class="input-container" name="fieldUserName" ngDefaultControl [(ngModel)]="username" required>
+            <input required type="text" />
+            <label>Nombre de usuario</label>
+        </div>
+        
+        <div class="input-container" name="fieldPassword" ngDefaultControl [(ngModel)]="userpwd" required>
+            <input required type="text" />
+            <label>Contraseña</label>
+        </div>
+        
+        <button class="btn-primary" (click)="signIn();"> INGRESAR </button>
     </div>
-    
-    <div class="input-container">
-        <input required type="text" />
-        <label>Contraseña</label>
-    </div>
-    
-    <button class="btn-primary"> INGRESAR </button>
 
 </section>
 
