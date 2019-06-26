@@ -8,9 +8,9 @@ button {
     }
 }
 
-button.btn-primary {
+.btn-primary {
     max-width: 314px;
-    width: 90%;
+    width: 80%;
     text-align: center;
     margin: 0 auto;
     display: block;
@@ -23,15 +23,24 @@ button.btn-primary {
     font-size: 14px;
 }
 
-button.btn-primary:hover {
-    max-width: 314px;
-    width: 90%;
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    border: none;
+.btn-primary:hover {
     background: transparent;
     color: #F07624;
     border: 1px solid #F07624;
+}
 
+section h1 {
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+    color: #212424;
+    line-height: 32px;
+    font-size: 32px;
+}
+
+section p {
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+    color: #575959;
 }

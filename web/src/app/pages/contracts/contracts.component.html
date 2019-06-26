@@ -1,10 +1,61 @@
 
-
-<input type='file' onchange="readURL(this);" />
-<img id="blah" src="#" alt="your image" />
-
 <section class="section-contracts">
     <h1>Asigna un contrato</h1>
     <p>Seleccione el contrato al cual será asociado el reporte de lectura del medidor</p>
+
+    <label class="form-check-inline">
+        <input class="form-check-input" type="radio" name="mode" [value]="'1005001'" [(ngModel)]="selectedContract" (change)="handleOnChange();"> 1005001
+    </label>
+
+    <!-- <label class="form-check-inline">
+        <input class="form-check-input" type="radio" name="mode" [value]="'1005001'" [(ngModel)]="selectedContract" (change)="handleOnChange();"> 1005001
+    </label> -->
+
+    <br><br><br>
+    <button class="btn-primary" (click)="goNextPage();"> SIGUIENTE </button>
 </section>
+
+
+
+
+<br>
+<br>
+<section class="section-picture">
+    <h1>Ahora necesitamos una foto del medidor</h1>
+    
+    <p>Asegúrate que se vea claro los números del contador.</p>
+    
+    <img class="image-counter" src="./../../../assets/img/contador.svg" alt="" *ngIf="!imgURL">
+    <img class="image-uploaded" [src]="imgURL" alt="Image contract" *ngIf="imgURL" />
+
+    <p>Puedes tomar o adjuntar una imagen que no tenga más de dos días de haber sido creada</p>
+    <br>
+    <input #file type='file' accept='image/*' (change)="preview(file.files);" />
+</section>
+
+
+
+
+
+<br>
+<br>
+
+
+
+
+<section class="section-checkout">
+    
+    <br><br>
+    <img class="icon-ckeck" src="./../../../assets/img/check.svg" alt="">
+    <h1>Gracias por tu espera</h1>
+    <p>Hemos recibido tu reporte, podrás hacerle seguimiento con el siguiente número</p>
+    <div class="separator"></div>
+    <br>
+    <p>Número de radicado</p>
+    <p class="order-number"> 0010203-1 </p>
+    <p>Nos pondremos en contacto en el menor tiempo posible</p>
+    <br><br>
+    
+</section>
+
 
