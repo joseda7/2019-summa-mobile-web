@@ -1,0 +1,37 @@
+
+.input-container {
+    width: 75%;
+    position: relative;
+    margin: 45px auto -25px;
+    label {
+        position: relative;
+        display: inline-block;
+        color: rgb(110, 110, 110);
+        top: 100px;
+        font-size: 1.25em;
+        transition: all .2s ease;
+        z-index: 10;
+        position: relative;
+        top: -30px;
+    }
+    input[type="text"] {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        font-size: 1.25em;
+        padding: 0 0 5px 0;
+        color: rgb(110, 110, 110);
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 2px rgb(110, 110, 110);
+        outline: none;
+        z-index: 20;
+    }
+    input[type="text"]:focus ~ label, input[type="text"]:valid ~ label {
+        top: -60px;
+        transform: scale(0.8);
+    }
+}
+
+
+  
