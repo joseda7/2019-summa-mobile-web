@@ -26,14 +26,14 @@ export class ConfirmPhotoPage {
     const params = {
       accessToken : this.sessionProvider.data['accessToken'],
       nic : this.sessionProvider.data['nicSelected'],
-      imageBase64 : this.base64
+      imageBase64 : this.base64.split(',')[1]
     }
     this.loggedServices.postReport(params)
       .subscribe((res) => { 
         this.utilities.closeLoader();
         console.log(res)
         if(res['status'] == true){
-          this.navCtrl.push(ResultPage);
+          this.navCtrl.push(ResultPage, { 'username': this.username});
         } else {
           this.utilities.showToast(res['message'])
         }

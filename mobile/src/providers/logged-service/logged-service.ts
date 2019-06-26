@@ -12,7 +12,7 @@ export class LoggedServiceProvider {
 
   postReport(params) {
     let httpHeaders = new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/json',
       'Cache-Control': 'no-cache'
     });
 
@@ -20,10 +20,7 @@ export class LoggedServiceProvider {
       headers: httpHeaders
     };
 
-
-
-    let body = "accessToken=" + params.accessToken + "&nic=" + params.nic + "&imageBase64=" + params.imageBase64.split(',')[1]
-    return this.http.post(celsiaRouting.loggedServices.postRadicado, body, options);
+    return this.http.post(celsiaRouting.loggedServices.postRadicado, params, options);
   }
 
 }

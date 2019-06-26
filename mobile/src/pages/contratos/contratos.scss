@@ -1,32 +1,5 @@
 page-contratos {
-    .header-container{
-        height: 130px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        p{
-            color: white;
-            font-size: 1.4rem;
-            width: 70%;
-            text-align: center;
-        }
-
-        .left-buttons-container{
-            width: 15%;
-            padding-left: 10px;
-            img{
-                width: 32px; 
-            }
-        }
-        .right-buttons-container{
-            width: 15%;
-            img{
-                width: 26px;
-                margin: 0 5px;
-            }
-        }
-    }
+    background-color: white !important;
     section.info{
         margin: 0 16px;
         .contract-card{

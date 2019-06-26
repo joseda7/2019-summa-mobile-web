@@ -1,20 +1,30 @@
 page-result {
-    section.info{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        i{
-            color: #2BBF8E;
-            font-size: 5rem;
+    background-color: white !important;
+    section.section-checkout {
+        h1 {
+            width: 80%;
+            display: block;
+            margin: 20px auto;
+            color: #212424;
+            text-align: center;
+            line-height: 32px;
+            font-size: 32px;
         }
-        h1{
-            color: black;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-        p{
+        p {
+            width: 80%;
+            display: block;
+            margin: 20px auto;
             color: #575959;
-            font-size: 1rem;
+            text-align: center;
+        }
+        .order-number {
+            color:#212424;
+            font-size: 40px;
+        }
+        .icon-ckeck {
+            width: 80px;
+            display: block;
+            margin: 30px auto;
         }
     }
 }
