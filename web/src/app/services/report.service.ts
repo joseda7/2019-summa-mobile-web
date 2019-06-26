@@ -7,16 +7,23 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ReportService {
 
     public url:string;
-    public headers:any;
+    public httpHeaders:any;
 
     constructor( private http:HttpClient ){
-        this.headers = new HttpHeaders().set("Content-type", "application/x-www-form-urlencoded");
         this.url = "https://us-central1-summa-celsia.cloudfunctions.net/recordData";
     }
 
     sendReport(params) {
-        let body = "userName=" + params.userName + "&userPass=" + params.userPass
-        return this.http.post(this.url, body, this.headers);
+        let httpHeaders = new HttpHeaders({
+            'Content-type': 'application/json',
+            'Cache-Control': 'no-cache'
+        })
+
+        let options = {
+            headers: httpHeaders
+        }
+
+        return this.http.post(this.url, params, options);
     }
 
 }

@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
         console.log(this.infoUser);
         if(this.infoUser.status == true) {
           console.log(this.infoUser);
-          // localStorage.setItem("user.nic", this.infoUser.data);
+          localStorage.setItem("userKey", this.infoUser.data.fb.user.apiKey);
+          localStorage.setItem("userNIC", this.infoUser.data.userFind.NIC[0]);
           this.goNextPage();
         }
       },

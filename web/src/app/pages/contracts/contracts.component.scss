@@ -33,3 +33,16 @@ section.section-checkout {
         margin: 30px auto;
     }
 }
+
+img.logoLeft {
+    margin: 20px;
+    width: 50px;
+}
+
+.inputUploadFile {
+    opacity: 0;
+    height: 66px;
+    top: -41px;
+    position: relative;
+    cursor: pointer;
+}
