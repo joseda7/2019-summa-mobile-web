@@ -1,7 +1,7 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>usuario</ion-title>
+    <ion-title><span class="icon-user1"></span>{{username}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -15,9 +15,9 @@
     <img src="assets/imgs/contador.svg" alt="">
   </section>
   <section class="buttons">
-    <button ion-button (click)="activateCamera('camera')"><span class="icon-camera">
+    <button class="btn-primary" (click)="activateCamera('camera')"><span class="icon-camera">
     </span>TOMAR FOTO</button>
-    <button ion-button (click)="activateCamera('gallery')"><span class="icon-image">
+    <button class="btn-primary" (click)="activateCamera('gallery')"><span class="icon-image">
     </span>ADJUNTAR IMAGEN</button>
   </section>
 </ion-content>

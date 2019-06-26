@@ -1,7 +1,7 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>confirm-photo</ion-title>
+    <ion-title><span class="icon-user1"></span>{{username}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,9 +11,9 @@
   </section>
   <section>
       <section class="buttons">
-          <button ion-button (click)="confirmPhoto()"><span class="icon-camera">
+          <button class="btn-primary"  (click)="confirmPhoto()"><span class="icon-camera">
           </span>GENERAR REPORTE</button>
-          <button ion-button (click)="goBack()"><span class="icon-image">
+          <button class="btn-primary"  (click)="goBack()"><span class="icon-image">
           </span>TOMAR NUEVAMENTE</button>
         </section>
   </section>

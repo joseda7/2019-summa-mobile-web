@@ -8,6 +8,6 @@ export class celsiaRouting {
     }
 
     public static loggedServices = {
-        crearRadicado: celsiaRouting.services.webService + 'radicado'
+        postRadicado: celsiaRouting.services.webService + 'recordData'
     }
 }

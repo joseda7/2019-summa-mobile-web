@@ -21,7 +21,9 @@ export class LoginServiceProvider {
       headers: httpHeaders
     };
 
-    return this.http.post(celsiaRouting.loginServices.login, params, options);
+    let body = "userName=" + params.userName + "&userPass=" + params.userPass;
+
+    return this.http.post(celsiaRouting.loginServices.login, body, options);
   }
 
 }

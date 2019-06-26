@@ -20,7 +20,10 @@ export class LoggedServiceProvider {
       headers: httpHeaders
     };
 
-    return this.http.post(celsiaRouting.loginServices.login, params, options);
+
+
+    let body = "accessToken=" + params.accessToken + "&nic=" + params.nic + "&imageBase64=" + params.imageBase64.split(',')[1]
+    return this.http.post(celsiaRouting.loggedServices.postRadicado, body, options);
   }
 
 }

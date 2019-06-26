@@ -14,3 +14,37 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+button {
+    &:active, &:focus {
+        outline: none;
+    }
+}
+
+button.btn-primary {
+    max-width: 314px;
+    width: 90%;
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+    border: none;
+    background: #F07624;
+    color: white;
+    padding: 17px 0px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-size: 14px;
+}
+
+button.btn-primary:disabled {
+    max-width: 314px;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    background: transparent;
+    color: #F07624;
+    border: 1px solid #F07624;
+
+}

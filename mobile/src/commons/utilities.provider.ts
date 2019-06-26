@@ -5,6 +5,8 @@ import { LoadingController } from 'ionic-angular';
 @Injectable()
 export class UtilitiesProvider {
 
+	loader;
+
 
 	constructor(public toastCtrl: ToastController,
         public loadingCtrl: LoadingController) {
@@ -28,11 +30,10 @@ export class UtilitiesProvider {
 	 * @method dismissModal
 	 */
 	public showLoader() {
-		const loader = this.loadingCtrl.create({
-            content: "Por favor espera...",
-            duration: 3000
+		this.loader = this.loadingCtrl.create({
+            content: "Por favor espera..."
           });
-          loader.present();
+          this.loader.present();
     }
     
     /**
@@ -40,6 +41,6 @@ export class UtilitiesProvider {
 	 * @method closeLoader 
 	 */
 	public closeLoader() {
-		
+		this.loader.dismiss();
 	}
 }

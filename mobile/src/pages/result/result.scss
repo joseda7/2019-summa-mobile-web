@@ -1,3 +1,20 @@
 page-result {
-
+    section.info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        i{
+            color: #2BBF8E;
+            font-size: 5rem;
+        }
+        h1{
+            color: black;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        p{
+            color: #575959;
+            font-size: 1rem;
+        }
+    }
 }

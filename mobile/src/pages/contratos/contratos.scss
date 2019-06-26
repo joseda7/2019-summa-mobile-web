@@ -1,3 +1,80 @@
 page-contratos {
+    .header-container{
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+        p{
+            color: white;
+            font-size: 1.4rem;
+            width: 70%;
+            text-align: center;
+        }
+
+        .left-buttons-container{
+            width: 15%;
+            padding-left: 10px;
+            img{
+                width: 32px; 
+            }
+        }
+        .right-buttons-container{
+            width: 15%;
+            img{
+                width: 26px;
+                margin: 0 5px;
+            }
+        }
+    }
+    section.info{
+        margin: 0 16px;
+        .contract-card{
+            display: flex;
+            align-items: center;
+            height: 70px;
+            margin: 5px;
+            border-radius: 5px;
+            justify-content: space-around;
+            -webkit-box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.25);
+            -moz-box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.25);
+            box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.25);
+            h1{
+                color: black;
+                font-weight: bold;
+            }
+            p{
+                color: #575959;
+                font-size: 1rem;
+            }
+            .icon-file-text, .icon-circle{
+                font-size: 2rem;
+                color: #B7B7B7
+            }
+            .icon-check-circle{
+                font-size: 2rem;
+                color: color($colors, celsia_naranja);
+            }
+            &-info{
+                display: flex;
+                flex-direction: column;
+                color: #212424;
+                font-size: 1.4rem;
+                width:70%;
+                font-weight: 600;
+                p{
+                    color: #575959;
+                    font-size: 1rem;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    
+    section.button{
+        position: absolute;
+        bottom: 20px;
+        height: 70px;
+        width: 100%;
+    }
 }

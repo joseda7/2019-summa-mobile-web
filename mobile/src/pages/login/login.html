@@ -1,19 +1,18 @@
 <ion-content padding>
   <section>
-    <ion-list>
-      <ion-item>
-        <ion-label floating>Nombre de usuario</ion-label>
-        <ion-input [(ngModel)]="userName" type="text"></ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label floating>Contraseña</ion-label>
-        <ion-input [(ngModel)]="password" type="password"></ion-input>
-      </ion-item>
-    
-    </ion-list>
-  </section>  
+    <div class="logo-celsia"></div>
+  </section>
   <section>
-    <button ion-button (click)="login()">INGRESAR</button>
+      <div class="input-container">
+          <input [(ngModel)]="userName" required type="text" />
+          <label>Nombre de usuario</label>
+      </div>
+      
+      <div class="input-container">
+          <input [(ngModel)]="password" required type="text" />
+          <label>Contraseña</label>
+      </div>
+      
+      <button (click)="login()" [disabled]="!userName || !password" class="btn-primary"> INGRESAR </button>
   </section>
 </ion-content>

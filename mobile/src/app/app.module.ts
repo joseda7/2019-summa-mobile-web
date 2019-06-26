@@ -1,3 +1,5 @@
+import { LoggedServiceProvider } from './../providers/logged-service/logged-service';
+import { SessionProvider } from './../commons/session.provider';
 import { UtilitiesProvider } from './../commons/utilities.provider';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginServiceProvider } from './../providers/login-service/login-service';
@@ -42,7 +44,9 @@ import { HomePage } from '../pages/home/home';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Camera,
     LoginServiceProvider,
-    UtilitiesProvider
+    UtilitiesProvider,
+    SessionProvider,
+    LoggedServiceProvider
   ]
 })
 export class AppModule {}

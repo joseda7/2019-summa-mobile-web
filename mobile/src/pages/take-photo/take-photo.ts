@@ -10,7 +10,10 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 })
 export class TakePhotoPage {
 
+  username;
+
   constructor(private camera: Camera, public navCtrl: NavController, public navParams: NavParams) {
+    this.username = this.navParams.get('username');
   }
 
   activateCamera(option) {
@@ -35,7 +38,7 @@ export class TakePhotoPage {
      // imageData is either a base64 encoded string or a file URI
      // If it's base64 (DATA_URL):
      let base64Image = 'data:image/jpeg;base64,' + imageData;
-     this.navCtrl.push(ConfirmPhotoPage, { 'base64': base64Image})
+     this.navCtrl.push(ConfirmPhotoPage, { 'base64': base64Image, 'username': this.username})
      console.log(base64Image);
     }, (err) => {
      // Handle error
