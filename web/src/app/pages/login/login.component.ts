@@ -27,14 +27,18 @@ export class LoginComponent implements OnInit {
     console.log("name: "+ this.username);
     console.log("pwd: "+ this.userpwd);
     
-    this._LoginService.logUser({ userName:this.username, userPass:this.userpwd }).subscribe(
+    let params = { 
+      userName: this.username, 
+      userPass: this.userpwd 
+    }
+    
+    this._LoginService.logUser(params).subscribe(
       result => {
         this.infoUser = result;
         console.log(this.infoUser);
         if(this.infoUser.status == true) {
-
-          localStorage.setItem("user", this.infoUser.data);
           console.log(this.infoUser);
+          // localStorage.setItem("user.nic", this.infoUser.data);
           this.goNextPage();
         }
       },

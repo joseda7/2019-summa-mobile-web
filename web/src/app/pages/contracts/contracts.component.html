@@ -4,18 +4,16 @@
     <p>Seleccione el contrato al cual será asociado el reporte de lectura del medidor</p>
 
     <label class="form-check-inline">
-        <input class="form-check-input" type="radio" name="mode" [value]="'0010203-1'" [(ngModel)]="selectedContract" (change)="handleOnChange();"> 0010203-1
+        <input class="form-check-input" type="radio" name="mode" [value]="'1005001'" [(ngModel)]="selectedContract" (change)="handleOnChange();"> 1005001
     </label>
 
-    <label class="form-check-inline">
-        <input class="form-check-input" type="radio" name="mode" [value]="'0010203-2'" [(ngModel)]="selectedContract" (change)="handleOnChange();"> 0010203-2
-    </label>
+    <!-- <label class="form-check-inline">
+        <input class="form-check-input" type="radio" name="mode" [value]="'1005001'" [(ngModel)]="selectedContract" (change)="handleOnChange();"> 1005001
+    </label> -->
 
     <br><br><br>
     <button class="btn-primary" (click)="goNextPage();"> SIGUIENTE </button>
 </section>
-
-
 
 
 
@@ -41,12 +39,23 @@
 
 <br>
 <br>
+
+
+
+
 <section class="section-checkout">
+    
+    <br><br>
+    <img class="icon-ckeck" src="./../../../assets/img/check.svg" alt="">
     <h1>Gracias por tu espera</h1>
-    <p>Gracias por tu espera</p>
+    <p>Hemos recibido tu reporte, podrás hacerle seguimiento con el siguiente número</p>
+    <div class="separator"></div>
+    <br>
     <p>Número de radicado</p>
-    <p> 0010203-1 </p>
+    <p class="order-number"> 0010203-1 </p>
     <p>Nos pondremos en contacto en el menor tiempo posible</p>
+    <br><br>
+    
 </section>
 
 

@@ -36,7 +36,7 @@ export class ContractsComponent implements OnInit {
 
     reader.onload = _event => {
       this.imgURL = reader.result; 
-      // console.log(this.imgURL); // Base 64
+      console.log(this.imgURL); // Base 64
     }
   
   }
