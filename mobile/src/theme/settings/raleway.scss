@@ -1,0 +1,8 @@
+$ralewayFont-path: $font-path !default;
+
+@font-face {
+    font-family: $font-railway;
+    src: url('#{$ralewayFont-path}/Raleway/Raleway-Regular.ttf');
+    font-weight: normal;
+    font-style: normal
+}
