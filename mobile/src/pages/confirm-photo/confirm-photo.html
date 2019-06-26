@@ -6,5 +6,16 @@
 </ion-header>
 
 <ion-content padding>
-  <img [src]="base64" alt="">
+  <section>
+      <img [src]="base64" alt="">
+  </section>
+  <section>
+      <section class="buttons">
+          <button ion-button (click)="confirmPhoto()"><span class="icon-camera">
+          </span>GENERAR REPORTE</button>
+          <button ion-button (click)="goBack()"><span class="icon-image">
+          </span>TOMAR NUEVAMENTE</button>
+        </section>
+  </section>
+  
 </ion-content>

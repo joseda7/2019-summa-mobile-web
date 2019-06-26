@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { LoggedServiceProvider } from "../../providers/logged-service/logged-service";
 
 @IonicPage()
 @Component({
@@ -11,12 +11,15 @@ export class ConfirmPhotoPage {
 
   base64;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public loggedServices: LoggedServiceProvider, public navCtrl: NavController, public navParams: NavParams) {
     this.base64 = this.navParams.get('base64');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ConfirmPhotoPage');
+  confirmPhoto() {
+
   }
 
+  goBack() {
+		this.navCtrl.pop();
+	}
 }

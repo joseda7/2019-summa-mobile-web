@@ -24,6 +24,4 @@ export class LoginServiceProvider {
     return this.http.post(celsiaRouting.loginServices.login, params, options);
   }
 
-
-
 }

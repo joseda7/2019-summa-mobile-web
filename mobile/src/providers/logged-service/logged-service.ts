@@ -1,17 +1,26 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpHeaders, HttpRequest } from '@angular/common/http';
+import { celsiaRouting } from "../../commons/constants/routing.constants";
 
-/*
-  Generated class for the LoggedServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class LoggedServiceProvider {
 
   constructor(public http: HttpClient) {
-    console.log('Hello LoggedServiceProvider Provider');
+    console.log('Hello LoginServiceProvider Provider');
+  }
+
+  postReport(params) {
+    let httpHeaders = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Cache-Control': 'no-cache'
+    });
+
+    let options = {
+      headers: httpHeaders
+    };
+
+    return this.http.post(celsiaRouting.loginServices.login, params, options);
   }
 
 }

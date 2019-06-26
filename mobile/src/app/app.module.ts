@@ -1,3 +1,4 @@
+import { UtilitiesProvider } from './../commons/utilities.provider';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginServiceProvider } from './../providers/login-service/login-service';
 import { ResultPageModule } from './../pages/result/result.module';
@@ -29,7 +30,6 @@ import { HomePage } from '../pages/home/home';
     ConfirmPhotoPageModule,
     ResultPageModule,
     HttpClientModule
-
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -41,7 +41,8 @@ import { HomePage } from '../pages/home/home';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Camera,
-    LoginServiceProvider
+    LoginServiceProvider,
+    UtilitiesProvider
   ]
 })
 export class AppModule {}
