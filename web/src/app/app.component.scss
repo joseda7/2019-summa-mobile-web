@@ -23,6 +23,11 @@ button {
     font-size: 14px;
 }
 
+p.btn-primary {
+    height: 20px;
+    cursor: pointer;
+}
+
 .btn-primary:hover {
     background: transparent;
     color: #F07624;
@@ -31,8 +36,9 @@ button {
 
 section h1 {
     width: 80%;
+    max-width: 650px;
     display: block;
-    margin: 20px auto;
+    margin: 40px auto;
     color: #212424;
     line-height: 32px;
     font-size: 32px;
@@ -40,7 +46,14 @@ section h1 {
 
 section p {
     width: 80%;
+    max-width: 650px;
     display: block;
     margin: 20px auto;
     color: #575959;
+}
+
+img.logoCelsia {
+    display: block;
+    max-width: 105px;
+    margin: 20px auto 50px;
 }
