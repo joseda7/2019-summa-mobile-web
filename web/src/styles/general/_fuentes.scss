@@ -13,7 +13,60 @@
     }
 }
 
-// @include newFont('Hero','hero');
+
+@include newFont('icomoon','icomoon');
+
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-camera:before {
+    content: "\e900";
+  }
+  .icon-check-circle:before {
+    content: "\e903";
+  }
+  .icon-chevron-left:before {
+    content: "\e901";
+  }
+  .icon-chevron-right:before {
+    content: "\e902";
+  }
+  .icon-circle:before {
+    content: "\e904";
+  }
+  .icon-file-text:before {
+    content: "\e906";
+  }
+  .icon-image:before {
+    content: "\e908";
+  }
+  .icon-lock:before {
+    content: "\e905";
+  }
+  .icon-user1:before {
+    content: "\e907";
+  }
+  .icon-x-octagon:before {
+    content: "\e909";
+  }
+  .icon-x:before {
+    content: "\e90a";
+  }
+
+
 // @include newFont('Chakra','ChakraPetch-Light');
 
 

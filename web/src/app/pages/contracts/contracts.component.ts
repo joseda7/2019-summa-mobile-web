@@ -17,7 +17,8 @@ export class ContractsComponent implements OnInit {
   public message: string;
 
   public userOrterObj:any;
-
+  public okSelected;
+  
   constructor(
     private _ReportService: ReportService
   ) { 
@@ -97,5 +98,9 @@ export class ContractsComponent implements OnInit {
       showPicture: true,
       showContract: false
     }
+  }
+
+  contractSelected() {
+    this.okSelected = true;
   }
 }

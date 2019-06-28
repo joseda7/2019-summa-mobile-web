@@ -4,13 +4,17 @@
     <h1>Asigna un contrato</h1>
     <p>Seleccione el contrato al cual será asociado el reporte de lectura del medidor</p>
     
-    <!-- <p>Contrato
-        <br>
-        <label class="select-contract">
-            <input class="form-check-input" type="radio" name="mode" ng-value="userOrterObj.nic" [(ngModel)]="selectedContract" (change)="okSelected = true"> {{userOrterObj.nic}}
-        </label>
-    </p> -->
-
+    <h1>    
+        <div class="contract-card" (click)="contractSelected();">
+            <span class="icon-file-text"></span>
+            <div class="contract-card-info">
+                <p>CONTRATO</p>
+                {{userOrterObj.nic}}
+            </div>
+            <span [ngClass]="{'icon-check-circle': okSelected , 'icon-circle': !okSelected}"></span>
+        </div>
+    </h1>
+        
     <br><br><br>
     <button class="btn-primary" (click)="showNextPage();" *ngIf="okSelected"> SIGUIENTE </button>
 </section>
